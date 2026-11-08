@@ -4,7 +4,7 @@ import telebot
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-TOKEN = os.environ.get('9108120129:AAHdZ3856ZuoVY3_Y8zP1Q7UKzqNEVSL_mo')
+TOKEN = os.environ.get'9108120129:AAHdZ3856ZuoVY3_Y8zP1Q7UKzqNEVSL_mo'
 bot = telebot.TeleBot(TOKEN)
 
 qureo_solutions = {
