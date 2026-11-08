@@ -59,10 +59,14 @@ def welcome(message):
 @bot.message_handler(func=lambda msg: True)
 def process_login_and_solve(message):
     try:
-        user_data = message.text.split()
-        if len(user_data) >= 2:
-            username = user_data[0]
-            password = user_data[1]
+            user_data = message.text.split()
+    if len(user_data) >= 2:
+        username = user_data[0] if user_data[0].isdigit() else user_data[1]
+        password = user_data[1] if user_data[0].isdigit() else user_data[0]
+        
+        
+            
+
             
             bot.reply_to(message, "🔐 جاري استلام البيانات وتجهيز المتصفح السحابي لتسجيل الدخول في منصة كوريو...")
             
